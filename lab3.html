@@ -4,30 +4,35 @@
         <title>
          Ana Valeria Machuca Miranda 
         </title>
-        <style>
-          body {
-         background-color: lightblue;
-         
-         }
-       </style>
+        <link rel="stylesheet" href="stylelab3.css">
     </head>
+<body>
+    <header>
+     <h1>Desarrollo web con: Ana </h1>
+       <p> A01713851  4422395609   ITESM QRO</p>
+    </header>
+<div class="contenido">
+    <nav>
+        <a href="#yo"> Acerca de mi</a> |
+        <a href="#experiencia"> Experiencia</a> |
+        <a href="#Gustos"> Gustos personales</a> |
+        <a href="#metodos">HTTP,métodos y más...</a> |
+        <a href="#CSS">CSS</a>
 
-    <body>
-        <div>
-            <h1
-             style="text-align: center;">ANA VALERIA MACHUCA MIRANDA: Acerca de mi
-            </h1>
-            <p>
-                Soy estudiante de ITC. 19 años. Mi número es 442 239 5609. A01713851
-            </p>
-        </div>
+    </nav>
        
         <hr/>
 
         <div>
-          <h2>
-             Experiencia
-          </h2>
+            <h2 id="yo"> Acerca de mi</h2>
+            <p>
+                Hola! Tengo 19 años y estudio Ingeniería en Tecnología commputacionales. 
+                Soy bailiarina y porrista.
+            </p>
+        </div>
+
+        <div>
+          <h2 id="experiencia">Experiencia</h2>
           <p>He tenido experiencia en mis proyectos escolares 
              trabajando con los siguientes lenguajes:
           </p>
@@ -43,14 +48,14 @@
         </div>
 
         <div>
-            <h3>
-                Gustos personales
-            </h3>
+            <h3 id="Gustos">Gustos personales</h3>
 
             <p>
-                Me gusta mucho escuchar música
+                Me gusta mucho escuchar música como:
                 <a href="https://open.spotify.com/intl-es/track/61og03io9xPCosu9rkgh1t?si=13ff69cf38644c2b">Mi canción favorita</a>
-                <a href="https://open.spotify.com/intl-es/track/2lTm559tuIvatlT1u0JYG2?si=f728c6c6a27b42b3">Otra canción que me gusta</a>
+                y esta 
+                <a href="https://open.spotify.com/intl-es/track/2lTm559tuIvatlT1u0JYG2?si=f728c6c6a27b42b3">otra canción que me gusta</a> <br>
+                Y ese es mi perro cheto al que amo. Tiene 9 años!
             </p>
            
             <img src="fotocheton.jpeg" alt="Y quiero mucho a mi perra" width="300" height="200">
@@ -67,11 +72,13 @@
              </ol>
 
 
-        </div>
+         </div>
     <hr/>
-        <div>
+        
+    <div> 
+         <h2 id="metodos"> Sobre: HTTPS, métodos, HTML4 y HTML 5, errores 400 y 500 y Ciclo de vida  de los SI</h2>
             <p> 
-                <i><strong>Cuál es la diferencia entre Internet y la World Wide Web?</strong><br>
+                <i><strong>Cuál es la diferencia entre Internet y la World Wide Web?</strong></i><br>
                 Internet es una inmensa red de computadoras alrededor de todo el mundo conectadas entre sí.En cambio, la web (la World Wide Web) es una enorme colección de páginas que se asienta sobreesa red de computadoras.
                
                 <i><strong>¿Cuáles son las partes de un URL?</strong> <br> </i>
@@ -129,6 +136,7 @@
                <i><strong>¿Cuáles son los principales controles de una forma HTML5?</strong></i><br>
                <ul>
                    <li><strong>&lt;input&gt;</strong> - con múltiples tipos: text, email, password, number, date, time, tel, url, color, file, search, range, checkbox, radio</li>
+
                    <li><strong>&lt;textarea&gt;</strong> - para texto multilínea</li>
                    <li><strong>&lt;select&gt;</strong> - lista desplegable con &lt;option&gt;</li>
                    <li><strong>&lt;button&gt;</strong> - botones (submit, reset, button)</li>
@@ -148,7 +156,45 @@
                 Concepcion del proyecto, desarrollo,puesta en operaciones , manetnimiento y retiro
             </p>
         </div>
+    <hr>
+        
+    <div>
+     <h2 id="CSS"> CSS(Cascade Style Sheets)</h2>
+            <p>
+                <strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </strong> <br>
+                Se debe usar con moderación y en casos específicos. Como cuando se desea retirar algún contenido que no puedes entonces se usa el !important pra aanularlo<br>
+                O si el cliente tiene alguna preferencia. Para quitar un !important se debe usar otro y tendra precendcia el que tenga mayor jerarquía pero se presta a confusiones<br>
+                O también si se busca algun elemento inmutable.
+                <strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</strong> <br>
+                Se debe tomar en cuenta el tamaña del archivo para no ralentizar la carga. Asímismo es importante que sea alineada al contexto y estilo de la página,y que no sea demasiado compleja en diseño<br>
+                para que no cause conflicto con lectura del texto superpuesto.
+                <strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</strong> <br>
+                Tomar en cuenta el tamañano de variación de las pantallas y la resolución ya que px puede cambiar gracias a eso. Se recomienda más usar % ya que <br>
+                es una medida de longitud relativa  que se adapata a diferentes medios y escalable.
+                <strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong><br>
+                Permancee solo lo necesario y lo demás es eliminado, el parseo el mucho más veloz ,es un archivo más pequeño en bytes se carga más rápido.
+            </p>
+        </div>
+        <h2 id="frameworks">Material Design</h2>
+        <strong>Descripción:</strong> <br>
+        Es lenguaje de diseño y un sistema de diseño abierto (opnea source)  usados para crear interfaces y está respaldado por diesñadores de Google<br>
+        A través de Material.io, ofrece orientación detallada sobre experiencia de usuario e implementaciones de componentes visuales para plataformas como Android, Flutter y la Web.
+        A partir de 2015 la mayoría de las aplicaciones móviles de Google para Android se había aplicado el nuevo lenguaje de diseño, <br>
+        incluyendo Gmail, YouTube, Google Drive, Google Docs, Sheets y Slides, Google Maps, Inbox, todas las aplicaciones de Google Play con la marca, y una más pequeña medida el navegador Chrome y Google Keep. <br>
+        El escritorio de una interfaz web de Google Drive, Docs, Sheets, diapositivas y la bandeja de entrada lo han incorporado también.<br>
+        Algunos componentes que tienen disponibles en su sitio para usarlos ya:
+        <ul>
+            <li> App bars</li>
+            <li> Buttons</li>
+            <li> Dates pickers</li>
+            <li> Time pickers</li>
+            <li> Sliders</li>
 
+        </ul>
+
+
+    </div>
+ 
 
     </body>
 </html>

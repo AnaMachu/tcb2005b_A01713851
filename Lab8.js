@@ -1,0 +1,248 @@
+//Problemas
+var arreglo= new Array(2,4,75,67,45,100,50)
+
+function Prom(arreglo){
+total=0;
+for(let n of arreglo){ total +=n};
+var promedio= total/ arreglo.length;
+return promedio;
+}
+
+console.log(Prom(arreglo));
+
+var String= "Hello Lalo from node";
+const filesystem = require('fs');
+filesystem.writeFileSync('labeight.txt',String);
+
+function palindromo(n) {
+    let num1 = n;
+    let num2 = 0;
+
+    while (num1 > 0) {
+        let digito = num1 % 10;
+        num2 = num2 * 10 + digito;
+        num1 = Math.trunc(num1 / 10); // división entera como en C++
+    }
+
+    return n === num2;
+}
+
+console.log(palindromo(60));
+console.log(palindromo(434));
+
+
+
+// Seccion de servidor con mi página
+const http = require('http');
+const html = `
+<html>
+   
+    <head>
+        <title>
+         Ana Valeria Machuca Miranda 
+        </title>
+        <link rel="stylesheet" href="stylelab3.css">
+    </head>
+<body>
+    <header>
+     <h1>Desarrollo web con: Ana </h1>
+       <p> A01713851  4422395609   ITESM QRO</p>
+    </header>
+<div class="contenido">
+    <nav>
+        <a href="#yo"> Acerca de mi</a> |
+        <a href="#experiencia"> Experiencia</a> |
+        <a href="#Gustos"> Gustos personales</a> |
+        <a href="#metodos">HTTP,métodos y más...</a> |
+        <a href="#CSS">CSS</a>
+
+    </nav>
+       
+        <hr/>
+
+        <div>
+            <h2 id="yo"> Acerca de mi</h2>
+            <p>
+                Hola! Tengo 19 años y estudio Ingeniería en Tecnología commputacionales. 
+                Soy bailiarina y porrista.
+            </p>
+        </div>
+
+        <div>
+          <h2 id="experiencia">Experiencia</h2>
+          <p>He tenido experiencia en mis proyectos escolares 
+             trabajando con los siguientes lenguajes:
+          </p>
+             <ul>
+                <li>C++</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+             </ul>
+         
+        </div>
+
+        <div>
+            <h3 id="Gustos">Gustos personales</h3>
+
+            <p>
+                Me gusta mucho escuchar música como:
+                <a href="https://open.spotify.com/intl-es/track/61og03io9xPCosu9rkgh1t?si=13ff69cf38644c2b">Mi canción favorita</a>
+                y esta 
+                <a href="https://open.spotify.com/intl-es/track/2lTm559tuIvatlT1u0JYG2?si=f728c6c6a27b42b3">otra canción que me gusta</a> <br>
+                Y ese es mi perro cheto al que amo. Tiene 9 años!
+            </p>
+           
+            <img src="fotocheton.jpeg" alt="Y quiero mucho a mi perra" width="300" height="200">
+            
+            <p>
+                Mi libro favorito es "Muerte en el Nilo" de Agatha Christie <br>
+                Me gusta mucho bailar los siguintes estilos ordenados:
+            </p>
+             <ol>
+                <li>Jazz</li>
+                <li>Ballet</li>
+                <li>Ubrano</li>
+                <li>Contemporáneo</li>
+             </ol>
+
+
+         </div>
+    <hr/>
+        
+    <div> 
+         <h2 id="metodos"> Sobre: HTTPS, métodos, HTML4 y HTML 5, errores 400 y 500 y Ciclo de vida  de los SI</h2>
+            <p> 
+                <i><strong>Cuál es la diferencia entre Internet y la World Wide Web?</strong></i><br>
+                Internet es una inmensa red de computadoras alrededor de todo el mundo conectadas entre sí.En cambio, la web (la World Wide Web) es una enorme colección de páginas que se asienta sobreesa red de computadoras.
+               
+                <i><strong>¿Cuáles son las partes de un URL?</strong> <br> </i>
+                Las partes de la URL so. Primero el protocolo que es HTTP o HTTPS(que está encriptada y privada). También puede ser FTP o SMTP <br>
+                Luego sigue el dominio, que se usa para identificar la IP del recurso y es el nombre del sitio, el path es la ubicación del recurso en el servidor <br>
+                Los parametros sirven para filtrar en el server o especificar detalles. (todo va al puerto 80 por default)<br>
+                
+                <i><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE? </strong> </i> <br>
+                El propósito de GET es para solicitar datos de algun sitio (no tiene cuerpo), el de HEAD (también sin cuerpo) es para obtener solo encabezados de una respuesta, el de POST es para mandar data a algun serivdor y crear un recurso. <br> 
+                el de PUT es para editar, actualizar un recurso en un servidor y en el cuerpo esta el mensaje que se agregará, el de PATCH es para aplicar modificaciones parciales al recurso <br>
+                y el de DELETE es para eliminar el recurso especificado. Ancla accede a secciones específicas de la  página.<br>
+               
+                <i><strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué? </strong> </i> <br>
+                El método POST porque estás mandando datos (usario y contraseña)
+               
+                <i><strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong> </i><br>
+                El método GET, porque busca un recurso en línea y no lo modifica. <br>
+               
+                <i><strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error? </strong> </i><br>
+                No hubo ningún error, todo está en orden con la respuesta.
+               
+                <i><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong> </i><br>
+                No, no lo es, este error sale debido a una busqueda mal hecha por parte del usuario. A menos que el enlace esté mal. 403 es prohibido.<br>
+               
+                <i><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong> </i><br>
+                Si, si el sitio reporta un error 500 significa que el servidor tuvo un error al intentar satisfacer la petición. <br>
+               
+                 <i><strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados .</strong> </i><br>
+                Significa que a pesar de que se puedan usar en navegadores pasados o actuales, ya no serán compatibles con los futuros pues dejarán de tener actualizaciones<br>
+                Ejemplos de estos son: <br>
+                <ul>
+                     <li>&lt;center&gt; - para centrar contenido (usar CSS text-align en su lugar)</li>
+                     <li>&lt;font&gt; - para cambiar fuente, tamaño y color (usar CSS)</li>
+                      <li>&lt;strike&gt; - para texto tachado (usar &lt;del&gt; o CSS)</li>
+                      <li>&lt;frame&gt; y &lt;frameset&gt; - para marcos (usar &lt;iframe&gt; o diseño moderno)</li>
+
+                </ul> <br>
+                
+                <i><strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></i> <br>
+                html4 no tenía la especificación de usar javascript y css. Hay bastante etiquetas que cambiaron de manera semántica en vez de expresar estilo.<br>
+                <ul>
+               <li><strong>Nuevas etiquetas semánticas:</strong> HTML5 introdujo &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;aside&gt; para mejor estructura del contenido</li>
+               <li><strong>Multimedia nativa:</strong> Etiquetas &lt;audio&gt; y &lt;video&gt; sin necesidad de plugins</li>
+               <li><strong>Nuevos tipos de input:</strong> email, date, number, tel, url, color, range, search, etc.</li>
+               <li><strong>APIs de JavaScript:</strong> Canvas para gráficos, Geolocation, LocalStorage, SessionStorage, Web Workers</li>
+               <li><strong>Soporte para aplicaciones web:</strong> Mejor manejo de formularios con validación nativa</li>
+                <li><strong>Eliminación de elementos visuales:</strong> Se removieron etiquetas de presentación (center, font) favoreciendo CSS</li>
+               <li><strong>DOCTYPE simplificado:</strong> &lt;!DOCTYPE html&gt; en lugar de la declaración larga de HTML4</li>
+               <li><strong>Mejor soporte para dispositivos móviles y accesibilidad</li>
+                </ul>
+                
+                <i><strong>¿Qué componentes de estructura y estilo tiene una tabla? </strong> </i><br>
+                <table>, <thead> (encabezado), <tbody> (cuerpo), <tfoot> (pie), <tr> (filas), <th> (títulos), <td> (celdas). 
+                
+               <i><strong>¿Cuáles son los principales controles de una forma HTML5?</strong></i><br>
+               <ul>
+                   <li><strong>&lt;input&gt;</strong> - con múltiples tipos: text, email, password, number, date, time, tel, url, color, file, search, range, checkbox, radio</li>
+
+                   <li><strong>&lt;textarea&gt;</strong> - para texto multilínea</li>
+                   <li><strong>&lt;select&gt;</strong> - lista desplegable con &lt;option&gt;</li>
+                   <li><strong>&lt;button&gt;</strong> - botones (submit, reset, button)</li>
+                   <li><strong>&lt;label&gt;</strong> - etiquetas para identificar controles</li>
+                   <li><strong>&lt;fieldset&gt;</strong> - agrupa controles relacionados</li>
+                    <li><strong>&lt;legend&gt;</strong> - título para un fieldset</li>
+                    <li><strong>&lt;datalist&gt;</strong> - lista de opciones predefinidas para input</li>
+                   <li><strong>&lt;output&gt;</strong> - muestra resultado de cálculos</li>
+                   <li><strong>&lt;progress&gt;</strong> - barra de progreso</li>
+                   <li><strong>&lt;meter&gt;</strong> - medidor de valores en un rango</li>
+                </ul>
+
+                <strong> ¿Cuál es el ciclo de vida de los sistemas de información?</strong><br>
+                Planeación y análisis, desarrollo prueba y entrega
+                
+                <strong>¿Cuál es el ciclo de desarrollo de sistemas de información?</strong>
+                Concepcion del proyecto, desarrollo,puesta en operaciones , manetnimiento y retiro
+            </p>
+        </div>
+    <hr>
+        
+    <div>
+     <h2 id="CSS"> CSS(Cascade Style Sheets)</h2>
+            <p>
+                <strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </strong> <br>
+                Se debe usar con moderación y en casos específicos. Como cuando se desea retirar algún contenido que no puedes entonces se usa el !important pra aanularlo<br>
+                O si el cliente tiene alguna preferencia. Para quitar un !important se debe usar otro y tendra precendcia el que tenga mayor jerarquía pero se presta a confusiones<br>
+                O también si se busca algun elemento inmutable.
+                <strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</strong> <br>
+                Se debe tomar en cuenta el tamaña del archivo para no ralentizar la carga. Asímismo es importante que sea alineada al contexto y estilo de la página,y que no sea demasiado compleja en diseño<br>
+                para que no cause conflicto con lectura del texto superpuesto.
+                <strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</strong> <br>
+                Tomar en cuenta el tamañano de variación de las pantallas y la resolución ya que px puede cambiar gracias a eso. Se recomienda más usar % ya que <br>
+                es una medida de longitud relativa  que se adapata a diferentes medios y escalable.
+                <strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong><br>
+                Permancee solo lo necesario y lo demás es eliminado, el parseo el mucho más veloz ,es un archivo más pequeño en bytes se carga más rápido.
+            </p>
+        </div>
+        <h2 id="frameworks">Material Design</h2>
+        <strong>Descripción:</strong> <br>
+        Es lenguaje de diseño y un sistema de diseño abierto (opnea source)  usados para crear interfaces y está respaldado por diesñadores de Google<br>
+        A través de Material.io, ofrece orientación detallada sobre experiencia de usuario e implementaciones de componentes visuales para plataformas como Android, Flutter y la Web.
+        A partir de 2015 la mayoría de las aplicaciones móviles de Google para Android se había aplicado el nuevo lenguaje de diseño, <br>
+        incluyendo Gmail, YouTube, Google Drive, Google Docs, Sheets y Slides, Google Maps, Inbox, todas las aplicaciones de Google Play con la marca, y una más pequeña medida el navegador Chrome y Google Keep. <br>
+        El escritorio de una interfaz web de Google Drive, Docs, Sheets, diapositivas y la bandeja de entrada lo han incorporado también.<br>
+        Algunos componentes que tienen disponibles en su sitio para usarlos ya:
+        <ul>
+            <li> App bars</li>
+            <li> Buttons</li>
+            <li> Dates pickers</li>
+            <li> Time pickers</li>
+            <li> Sliders</li>
+
+        </ul>
+
+
+    </div>
+ 
+
+    </body>
+</html>
+`
+const server = http.createServer((request, response) => {
+    console.log(request.url);
+    response.setHeader('Content-Type', 'text/html');
+    response.write(html);
+    response.end();
+});
+
+server.listen(3000, () => {
+    console.log('Servidor en http://localhost:3000');
+});
